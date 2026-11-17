@@ -107,8 +107,6 @@ summary:hover { color: var(--fg); }
 
 .nota { color: var(--muted); font-size: .85rem; margin: 1.25rem 0 0; }
 
-footer { margin-top: 3rem; color: var(--muted); font-size: .85rem; }
-footer p { margin: 0; }
 
 .vh {
   position: absolute; width: 1px; height: 1px;
