@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Encriptado SMRLD</title>
+<meta name="description" content="Escribe un mensaje y conviértelo a un alfabeto cifrado.">
+<meta name="color-scheme" content="light dark">
+<link rel="preload" href="fonts/EncriptadoSMRLD-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>Encriptado SMRLD</h1>
+    <p class="sub">Escribe un mensaje y pásalo al alfabeto cifrado.</p>
+  </header>
+
+  <form id="form">
+    <label class="vh" for="entrada">Mensaje</label>
+    <textarea id="entrada" rows="4" maxlength="600"
+              placeholder="Escribe tu mensaje…" autocomplete="off"></textarea>
+    <p class="error" id="error" hidden>Escribe algo primero.</p>
+    <div class="acciones">
+      <button type="submit">Cifrar</button>
+      <button type="button" id="descargar" class="ghost" hidden>Descargar imagen</button>
+    </div>
+  </form>
+
+  <section id="resultado" hidden>
+    <p class="cifrado" id="salida"></p>
+  </section>
+
+  <details>
+    <summary>Ver la clave</summary>
+    <ul class="clave" id="clave"></ul>
+    <p class="nota">Las letras h, k, w, x, z y ñ no estaban en el alfabeto original;
+      se añadieron siguiendo el mismo sistema de forma base y circulito.</p>
+  </details>
+
+  <footer>
+    <p>Alfabeto reconstruido a partir de una carta manuscrita.</p>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
